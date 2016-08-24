@@ -217,3 +217,23 @@ for (var i = 0; i < counter; i++) {
 }
 console.timeEnd('array time'); // 40.505ms
 ```
+
+## 9. Try to use expression instead of a simple if/else statement
+
+#### Bad
+```javascript
+var result;
+
+if ( condition() ) {
+	result = 'valueIfTrue';	
+} else {
+	result = 'valueIfFalse';
+}
+```
+
+#### Good
+```javascript
+var result = condition() ? 'valueIfTrue' : 'valueIfFalse';
+```
+
+With code compiler, one line will be executed faster multiple line.
